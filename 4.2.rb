@@ -7,6 +7,12 @@ def gcd(m, n)
   gcd(n, r)
 end
 
+def smart_gcd(m, n)
+  # p "m:#{m}, n:#{n}, r:#{r}"
+  return m if n == 0
+  gcd(n, m % n)
+end
+
 print "m = "
 m = gets.to_i
 print "n = "
