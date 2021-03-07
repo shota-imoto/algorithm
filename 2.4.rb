@@ -1,7 +1,5 @@
-# 2.4 計算量を求める例（2）：最近点対問題
-
 require './lib/generator'
-
+# 2.4 計算量を求める例(2): 最近点対問題
 class Array
   def from(position)
     self[position, length] || []

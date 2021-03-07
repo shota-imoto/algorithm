@@ -5,6 +5,10 @@ class Generator
         [rand(range), rand(range)]
       end
     end
+
+    def random_array(range = 1..100, length = 5)
+      Array(lengh) { |_| rand(range)}
+    end
   end
 
 end
