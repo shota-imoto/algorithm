@@ -29,20 +29,12 @@ class PartOfSum
   end
 
   def _check_sumable_cache?(i, w)
-    if i == 0
-      if w == 0
-        return true
-      else
-        return false
-      end
-    end
-
-
+    return w == 0 if i == 0
 
     cache["#{i-1}-#{w}"] = _check_sumable_cache?(i-1, w) if cache["#{i-1}-#{w}"].nil?
     cache["#{i-1}-#{w-array[i-1]}"] = _check_sumable_cache?(i-1, w-array[i-1]) if cache["#{i-1}-#{w-array[i-1]}"].nil?
 
-    return true if  cache["#{i-1}-#{w}"] || cache["#{i-1}-#{w-array[i-1]}"]
+    return true if cache["#{i-1}-#{w}"] || cache["#{i-1}-#{w-array[i-1]}"]
     false
   end
 end
