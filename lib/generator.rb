@@ -7,7 +7,7 @@ class Generator
     end
 
     def random_array(range = 1..100, length = 5)
-      Array(lengh) { |_| rand(range)}
+      Array.new(length) { |_| rand(range)}
     end
   end
 
