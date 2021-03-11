@@ -6,6 +6,12 @@ class Generator
       end
     end
 
+    def two_dimension_table(height, width, range = 1..100)
+      Array.new(height) do |_|
+        Array.new(width) { |_| rand(range) }
+      end
+    end
+
     def random_array(range = 1..100, length = 5)
       Array.new(length) { |_| rand(range)}
     end
